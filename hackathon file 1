@@ -1,0 +1,112 @@
+
+
+import  random
+def abc(a):
+    c_moves = ["rock","paper","scissors"]
+
+    computer = c_moves[random.randint(0,2)]
+
+    player=False
+
+    while player == False:
+        player = input("Enter your move: ")
+
+        if computer == player:
+            print("opponent move",computer)
+            print("Its a tie!")
+            new_game = input("do you want to play another round?(y/n)")
+
+            if new_game == "yes":
+
+                a=input("enter your name: ")
+                print("enter any one of this:", "paper", "scissor", "rock")
+                return(abc(a))
+            else:
+                print("thanks for playing !!!")
+                break
+        elif player == 'rock':
+            if computer == 'paper':
+                print("opponent move", computer)
+                print("You lose,Coumpter wins!")
+                new_game = input("do you want to play another round?(y/n)")
+
+                if new_game == "yes":
+
+                    a = input("enter your name: ")
+                    print("enter any one of this:", "paper", "scissor", "rock")
+                    return (abc(a))
+                else:
+                    print("thanks for playing !!!")
+                    break
+            else:
+                print("opponent move", computer)
+                print("You win!")
+                new_game = input("do you want to play another round?(y/n)")
+
+                if new_game == "yes":
+
+                    a = input("enter your name: ")
+                    print("enter any one of this:", "paper", "scissor", "rock")
+                    return (abc(a))
+                else:
+                    print("thanks for playing !!!")
+                    break
+        elif player == 'paper':
+            if computer == 'scissors':
+                print("opponent move", computer)
+                print("You lose,Computer wins!")
+                new_game = input("do you want to play another round?(y/n)")
+
+                if new_game == "yes":
+
+                    a = input("enter your name: ")
+                    print("enter any one of this:", "paper", "scissor", "rock")
+                    return (abc(a))
+                else:
+                    print("thanks for playing !!!")
+                    break
+            else:
+                print("opponent move", computer)
+                print('You win!')
+                new_game = input("do you want to play another round?(y/n)")
+
+
+                if new_game == "yes":
+
+                    a = input("enter your name: ")
+                    print("enter any one of this:", "paper", "scissor", "rock")
+                    return (abc(a))
+                else:
+                    print("thanks for playing !!!")
+                    break
+        elif player == 'scisscors':
+            if computer == 'rock':
+                print("opponent move", computer)
+                print("you lose,computer wins!")
+                new_game = input("do you want to play another round?(y/n)")
+                if new_game == "yes":
+
+                    a = input("enter your name: ")
+                    print("enter any one of this:", "paper", "scissor", "rock")
+                    return (abc(a))
+                else:
+                    print("thanks for playing !!!")
+                    break
+            else:
+                print("opponent move", computer)
+                print("you win")
+                new_game = input("do you want to play another round?(y/n)")
+                if new_game ==  "yes":
+
+                    a = input("enter your name: ")
+                    print("enter any one of this:", "paper", "scissor", "rock")
+                    return (abc(a))
+                else:
+                    print("thanks for playing !!!")
+                    break
+a=input("enter your name: ")
+print("enter any one of this:","paper","scissor","rock")
+abc(a)
+
+
+
